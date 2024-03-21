@@ -29,6 +29,7 @@ SELECT
 		[Дисциплина]	= discipline_name,
 		[Преподаватель] = FORMATMESSAGE('%s %s %s', last_name,first_name,middle_name),
 		[Дата]			= Schedule.[date],
+		[День недели]	= DATENAME(WEEKDAY,Schedule.[date]),
 		[Время]			= Schedule.[time],
 		[Статус]		= IIF([Schedule].[spent]=1,'проведено','запланировано')
 FROM Schedule
