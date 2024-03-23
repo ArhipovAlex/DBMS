@@ -1,0 +1,4 @@
+USE PD_321
+
+DELETE FROM Schedule;
+SELECT * FROM Schedule;
